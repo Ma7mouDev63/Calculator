@@ -31,8 +31,6 @@ function operate(operator, num1, num2) {
     }
 }
 
-//Okay So I will create a function that takes in the textContent
-//Of the number button that was pressed and that text to the display
 let display = document.querySelector('#display');
 
 const numBtns = document.querySelectorAll('.number');
@@ -44,4 +42,16 @@ numBtns.forEach((btn) => {
 
 function popToDisplay(btnTxt) {
     display.textContent += btnTxt;
+}
+
+//Checks if the given button text is an operator
+function isOperator(btnTxt) {
+    let result = false;
+    const oprBtns = document.querySelectorAll('.operator');
+    oprBtns.forEach((btn) => {
+        if(btnTxt === btn.textContent) {
+            result = true;
+        }
+    });
+    return result;
 }
