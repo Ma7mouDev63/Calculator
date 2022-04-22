@@ -55,3 +55,11 @@ function isOperator(btnTxt) {
     });
     return result;
 }
+
+//Checks whether the current display is empty
+function isEmpty() {
+    if(display.textContent === '') {
+        return true;
+    }
+    return false;
+}
