@@ -37,4 +37,6 @@ body {
 .buttons button {
     height: 50px;
     width: 60px;
+    font-size: 18px;
+    font-weight: bold;
 }
