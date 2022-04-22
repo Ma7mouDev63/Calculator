@@ -30,36 +30,3 @@ function operate(operator, num1, num2) {
             break;
     }
 }
-
-let display = document.querySelector('#display');
-
-const numBtns = document.querySelectorAll('.number');
-numBtns.forEach((btn) => {
-    btn.addEventListener('click', ()=> {
-        popToDisplay(btn.textContent);
-    });
-});
-
-function popToDisplay(btnTxt) {
-    display.textContent += btnTxt;
-}
-
-//Checks if the given button text is an operator
-function isOperator(btnTxt) {
-    let result = false;
-    const oprBtns = document.querySelectorAll('.operator');
-    oprBtns.forEach((btn) => {
-        if(btnTxt === btn.textContent) {
-            result = true;
-        }
-    });
-    return result;
-}
-
-//Checks whether the current display is empty
-function isEmpty() {
-    if(display.textContent === '') {
-        return true;
-    }
-    return false;
-}
