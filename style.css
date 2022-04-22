@@ -20,11 +20,24 @@ body {
     align-items: center;
 }
 
-#display {
+#displaybox {
     height: 90px;
     width: 250px;
     border: solid;
     border-width: 1px;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 10px;
+}
+
+#currentdisplay {
+    font-size: 20px;
+    font-weight: bold;    
+}
+
+#result {
     font-size: 30px;
     font-weight: bold;
 }
