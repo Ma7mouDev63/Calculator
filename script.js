@@ -30,3 +30,18 @@ function operate(operator, num1, num2) {
             break;
     }
 }
+
+//Okay So I will create a function that takes in the textContent
+//Of the number button that was pressed and that text to the display
+let display = document.querySelector('#display');
+
+const numBtns = document.querySelectorAll('.number');
+numBtns.forEach((btn) => {
+    btn.addEventListener('click', ()=> {
+        popToDisplay(btn.textContent);
+    });
+});
+
+function popToDisplay(btnTxt) {
+    display.textContent += btnTxt;
+}
